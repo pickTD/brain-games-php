@@ -15,7 +15,7 @@ function isPrime(int $number): bool
     } elseif ($number < 4) {
         return true;
     }
-    for ($i = 2, $max = sqrt($number); $i < $max; $i++) {
+    for ($i = 2, $max = sqrt($number) + 1; $i < $max; $i++) {
         if ($number % $i === 0) {
             return false;
         }
