@@ -16,7 +16,7 @@ function isPrime(int $number): bool
         return true;
     }
     for ($i = 2, $max = sqrt($number); $i < $max; $i++) {
-        if (!($number % $i)) {
+        if ($number % $i === 0) {
             return false;
         }
     }

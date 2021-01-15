@@ -20,7 +20,10 @@ function getQuestion(): array
 
 function gcd(int $a, int $b): int
 {
-    return ($a % $b) ? gcd($b, $a % $b) : $b;
+    if ($a % $b === 0) {
+        return $b;
+    }
+    return gcd($b, $a % $b);
 }
 
 function start(): void
