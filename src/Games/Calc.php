@@ -22,12 +22,15 @@ function getAnswer(array $question): int
     [$a, $operator, $b] = $question;
     switch ($operator) {
         case '+':
-            return $a + $b;
+            $result = $a + $b;
+            break;
         case '-':
-            return $a - $b;
+            $result = $a - $b;
+            break;
         case '*':
-            return $a * $b;
+            $result = $a * $b;
     }
+    return $result;
 }
 
 function start(): void
