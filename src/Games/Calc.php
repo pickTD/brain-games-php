@@ -20,6 +20,7 @@ function getQuestion(): array
 function getAnswer(array $question): int
 {
     [$a, $operator, $b] = $question;
+    $result = 0;
     switch ($operator) {
         case '+':
             $result = $a + $b;
