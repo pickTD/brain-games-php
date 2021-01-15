@@ -10,7 +10,7 @@ const GOAL = 3;
 function play(string $instructions, callable $getRound): void
 {
     line("Welcome to the Brain Games!");
-    $name = prompt("May I have your name? ", false, '');
+    $name = prompt("May I have your name", "", "? ");
     line("Hello, %s!", $name);
     line($instructions);
     $answersCount = 0;
@@ -18,7 +18,7 @@ function play(string $instructions, callable $getRound): void
     while ($answersCount < GOAL) {
         [$question, $correctAnswer] = $getRound();
         line("Question: %s", $question);
-        $answer = prompt("Your answer: ", false, '');
+        $answer = prompt("Your answer");
         if ($answer !== $correctAnswer) {
             line("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, $correctAnswer);
             line("Let's try again, %s!", $name);
