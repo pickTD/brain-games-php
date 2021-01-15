@@ -18,7 +18,7 @@ function getQuestion(): array
     return [$a, $b];
 }
 
-function gcd($a, $b)
+function gcd(int $a, int $b): int
 {
     return ($a % $b) ? gcd($b, $a % $b) : $b;
 }
